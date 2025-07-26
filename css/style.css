@@ -1,0 +1,207 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+
+
+
+ul#main-menu {
+	font-family: 'Lato', sans-serif;
+	font-family: 1px;
+	font-weight: 300;
+	list-style: none;
+	position: absolute;
+	cursor: pointer;
+}
+
+ul#main-menu > ul {
+	list-style: none;
+	opacity: 0;
+}
+
+ul#main-menu li {
+	background: #212121;
+	padding: 21px 50px 21px 10px;
+	border-bottom: 1px solid #167b46;
+}
+
+ul#main-menu li:hover {
+	background: #02c850;
+}
+
+ul#main-menu li:first-child {
+	border-radius: 0 5px 0 0;
+}
+
+ul#main-menu li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+ul#main-menu i {
+	padding-right: 15px;
+	padding-left: 5px;
+}
+
+
+
+#submenu {
+	color: #fff;
+	position: absolute;
+	width: 230px;
+	left: 220px;
+	margin-top: -67px;
+}
+
+ul#submenu > li {
+	padding: 21px;
+}
+
+ul#main-menu ul#submenu.show-submenu {
+	opacity: 1;
+	cursor: pointer;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+ul#main-menu ul#submenu.hide-submenu {
+	cursor: pointer;
+	display: none;
+}
+
+
+
+
+html {
+	position: relative;
+	min-height: 100%;
+  }
+  
+  body {
+	margin-bottom: 60px;
+  }
+  #footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #212121;
+  }
+
+.truncate-text {
+    max-width: 250px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Стиль для динамичных карточек товаров */
+.product-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: none; /* Убираем рамку для более чистого вида */
+}
+
+.product-card:hover {
+    transform: translateY(-7px); /* "Приподнимаем" карточку при наведении */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Делаем тень более глубокой */
+}
+
+/* Стиль для бокового меню категорий */
+.list-group-item.active {
+    background-color: #28a745; /* Зеленый цвет для активной категории */
+    border-color: #28a745;
+}
+
+/* Убираем подчеркивание у ссылок внутри карточек */
+.product-card,
+.product-card:hover,
+.product-card:focus {
+    text-decoration: none;
+}
+
+
+/* Стили для контейнера меню: убираем скругление углов и тень */
+.list-group.shadow-sm {
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+/* Стили для отдельного пункта меню */
+.list-group-item-action {
+    background-color: #212121;  /* Фон --gray-dark */
+    color: #f8f9fa;             /* Светлый цвет текста */
+    font-weight: 500;           /* Делаем текст немного жирнее */
+    border: none;               /* Убираем все рамки по умолчанию */
+    border-radius: 0 !important; /* Убираем скругление углов */
+    border-top: 1px solid #28a745; /* Разделитель цвета --success */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Убираем верхний разделитель у самого первого пункта */
+.list-group-item-action:first-child {
+    border-top: none;
+}
+
+/* Стиль при наведении курсора или для активной категории */
+.list-group-item-action:hover,
+.list-group-item.active {
+    background-color: #28a745;  /* Фон --success */
+    color: #ffffff;             /* Белый цвет текста для контраста */
+    border-top-color: #28a745;  /* Цвет рамки совпадает с фоном */
+}
+
+
+.advantage-item {
+    text-align: center;
+}
+.advantage-item .icon {
+    font-size: 3rem; /* Крупный размер для иконок */
+    color: #28a745; /* Зеленый цвет для иконок */
+    margin-bottom: 1rem;
+}
+.advantage-item h5 {
+    color: #343a40;
+    font-weight: 600;
+}
+
+
+.truncate-cell {
+    max-width: 250px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/*
+=========================================
+  СТИЛИ ДЛЯ АДМИН-ПАНЕЛИ
+=========================================
+*/
+
+/* Темное боковое меню в стиле основного сайта */
+.admin-sidebar {
+    border-radius: 0.25rem;
+    overflow: hidden; /* Скрываем углы у первого и последнего элемента */
+}
+
+.admin-sidebar .list-group-item {
+    background-color: #343a40;  /* Фон --gray-dark */
+    color: #f8f9fa;
+    border: none;
+    border-radius: 0 !important;
+    border-top: 1px solid rgba(40, 167, 69, 0.3); /* Полупрозрачный зеленый разделитель */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.admin-sidebar .list-group-item:first-child {
+    border-top: none;
+}
+
+.admin-sidebar .list-group-item.active,
+.admin-sidebar .list-group-item:hover {
+    background-color: #28a745;  /* Фон --success */
+    color: #ffffff;
+    border-top-color: #28a745;
+}
